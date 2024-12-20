@@ -1,17 +1,17 @@
 import React from 'react';
-import {Box} from '@mui/material'
-import{Route,Routes,BrowserRouter} from 'react-router-dom' 
-import Instruction from '../Pages/Instruction'
-import Vehicle from '../Pages/Vehicles'
+import {Box,Container} from '@mui/material';
+import{Route,Routes,BrowserRouter} from 'react-router-dom' ;
+import Instruction from '../Pages/Instruction/Instruction';
+import Vehicle from '../Pages/Vehicles/Vehicles';
 const Routess = () => {
   return (
     <BrowserRouter>
-      <Box sx={{ flexGrow: 1 }}>
+      <Container maxwidth="sm" sx={{bgcolor:'red'}}>
         <Routes>
           <Route path="/start" element={<Instruction />} />
-          <Route path="/" element={<Vehicle />} />
+          <Route path="/PLAY" element={<Vehicle />} />
         </Routes>
-      </Box>
+      </Container>
     </BrowserRouter>
   );
 }
